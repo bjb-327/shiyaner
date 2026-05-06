@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>音乐播放器</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="player">
+     <!-- 学号姓名 -->
+    <div class="user-info">
+        学号：24215220215 &nbsp;&nbsp; 姓名：卜俊彬
+    </div>
+
+    <div class="cover">
+        <img id="cover" src="img/record0.jpg">
+    </div>
+
+    <div class="info">
+        <h1 id="title">歌曲名</h1>
+        <p id="artist">歌手</p>
+    </div>
+
+    <audio id="audio"></audio>
+
+    <div class="progress">
+        <span id="current">00:00</span>
+        <input type="range" id="progressBar" value="0">
+        <span id="duration">00:00</span>
+    </div>
+
+    <div class="controls">
+        <button onclick="prev()">⏮</button>
+        <button onclick="togglePlay()" id="playBtn">▶</button>
+        <button onclick="next()">⏭</button>
+    </div>
+
+    <div class="volume">
+        🔊 <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+    </div>
+
+    <div class="speed">
+        倍速:
+        <select id="speed">
+            <option value="1">1.0x</option>
+            <option value="1.5">1.5x</option>
+            <option value="2">2.0x</option>
+        </select>
+    </div>
+
+    <ul id="playlist"></ul>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
